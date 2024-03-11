@@ -1,4 +1,4 @@
 module.exports={
-    config: require('./config.js'),
+    config: require('./server.js'),
     
 }
