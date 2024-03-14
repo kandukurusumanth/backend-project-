@@ -7,7 +7,7 @@ async function createairplaecontroller(req,res){
             modelnumber:req.body.modelnumber,
             seats:req.body.seats
         })
-        // console.log(airplane);
+        
         return res.json({
             sucess:true,
             message:'done',

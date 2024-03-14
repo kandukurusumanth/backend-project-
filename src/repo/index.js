@@ -1,5 +1,6 @@
 module.exports={
     crudrepo:require('./crud-repo'),
     airplanerepo:require('./airplaerepo'),
-    airport:require('./airport')
+    airport:require('./airport'),
+    city:require('./city')
 }

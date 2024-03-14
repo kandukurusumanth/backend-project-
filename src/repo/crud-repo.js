@@ -1,3 +1,5 @@
+const { response } = require("express");
+const { error } = require("../utils/common/sucess_response");
 
 class CrudRepository{
    
@@ -33,24 +35,21 @@ class CrudRepository{
                 id:data
             }
         });
-        
-        if(response==0) {
-           
-            throw error
-        }
-        
+        console.log(response);
+        if(response===0) throw new Error ('making a wrong deletion');
         return response
 
 
 
     }
     async get(data){
-        
-       
         const response = await this.model.findByPk(data);
+       
+        if(!response){
+           throw new Error ('you are getting the data which is not present');
+        }
+        return response
         
-        if(!response) throw error
-        return response;
         
         
 
@@ -69,19 +68,15 @@ class CrudRepository{
     }
     async update(data,id){
         
-        const response = await this.model.update(data,{
+    
+        const [response]= await this.model.update(data,{
             where:{
                 id:id
             }
-        });
-        
-        
-        if(response==0) throw error
-        return response;
-        
-        
-
-
+        })
+        if(response===0) throw new Error('doing the updation which is not present ');
+        return response
+              
     }
 }
 
