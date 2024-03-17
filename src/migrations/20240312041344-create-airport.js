@@ -20,6 +20,10 @@ module.exports = {
       cityid: {
         type: Sequelize.INTEGER,
         allowNull: false,
+       
+
+        
+
       },
       createdAt: {
         allowNull: false,

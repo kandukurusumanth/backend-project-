@@ -10,7 +10,9 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       modelnumber: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        
+        
       },
       seats: {
         type: Sequelize.INTEGER

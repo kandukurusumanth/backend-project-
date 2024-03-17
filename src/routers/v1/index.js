@@ -7,11 +7,13 @@ const router= express.Router();
 const infocontroller = require('./info');
 const airplane = require('./airplaerouter');
 const  airport  = require('./airportrouter');
-const city = require('./cityrouter')
+const city = require('./cityrouter');
+const flight = require('./flightrouter');
 router.use('/',infocontroller)
 router.use('/airplane',airplane)
 router.use('/airport',airport)
 router.use('/city',city)
+router.use('/flight',flight)
 
 module.exports=router
 
