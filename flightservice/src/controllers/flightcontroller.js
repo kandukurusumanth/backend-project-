@@ -43,6 +43,7 @@ async function getflightcontroller(req,res){
 }
 async function getflightcontrollerbyid(req,res){
     try {
+    
         const flight = await flightservice.getflight({
             id:req.params.id
         })

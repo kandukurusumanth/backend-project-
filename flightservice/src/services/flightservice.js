@@ -77,8 +77,8 @@ async function getallflight(data){
 }
 async function getflight(data){
     try {
-        // console.log(data.id.id);
-        const flight = await flightservice.get(data.id.id);
+        console.log(data);
+        const flight = await flightservice.get(data.id);
         return flight
     } catch (error) {
         throw error

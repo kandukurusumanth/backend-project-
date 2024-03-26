@@ -33,7 +33,7 @@ class Flight extends CrudRepository{
                     order:sort,
                     include: [
                         {
-                            model:Airplane
+                            model:Airplanep
                         },
                         {
                             model:Airport,
